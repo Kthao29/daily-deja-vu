@@ -19,5 +19,37 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
 });
+
+
+//The current day
+var today = dayjs(); 
+$('#currentDay').text(today.format('dddd, MMMM D, YYYY'));
+//The current time
+var hour = dayjs()
+$('#currentTime').text(hour.format('hh:mm:ss'));
+
+//Function to get the clock updated every seconds
+function updateTime() {
+  
+  const dateElement = $('#currentDay');
+  const timeElement = $('#currentTime');
+  const currentDate = dayjs().format('dddd, MMMM D, YYYY');
+  const currentTime = dayjs().format('hh:mm:ss A');
+  dateElement.text(currentDate);
+  timeElement.text(currentTime);
+}
+setInterval(updateTime, 1000);
+console.log(updateTime);
+
+
+
+$(".saveBtn").on("click", function (event) {
+  event.preventDefault();
+
+   var time = $(this).parent().attr("id");
+   var description = $(this).siblings(".description").val();
+  localStorage.setItem(time, description);
+
+});
+
