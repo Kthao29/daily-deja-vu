@@ -42,6 +42,7 @@ THEN the saved events persist
 4. Click the save icon on the right
 
 ## Source URL
+https://kthao29.github.io/daily-deja-vu/
 
 ## Installation
 1. Clone github Repository
