@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin: 10px;
 }
 
 textarea {
@@ -31,7 +32,7 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #b9b8b8;
   color: white;
 }
 
@@ -56,4 +57,13 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.p-5 {
+  text-align: center;
+  border-bottom: solid;
+  border-radius: 200px;
+  border-top: solid;
+  margin: 10px;
+  background-color: #def8f8;
 }
